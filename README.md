@@ -1,3 +1,5 @@
+[![CI/CD Pipeline](https://github.com/Paaula21/PracticaExamen/actions/workflows/ci.yml/badge.svg)](https://github.com/Paaula21/PracticaExamen/actions/workflows/ci.yml)
+
 # SpringUMA — Medical Records System
 
 > ⚠️ Replace `<YOUR_USER>` and `<YOUR_REPO>` with your actual GitHub account details.
