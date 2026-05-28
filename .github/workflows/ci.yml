@@ -51,3 +51,17 @@ jobs:
 
     - name: Compilar y ejecutar pruebas
       run: ./mvnw verify --batch-mode
+    
+    - name: Generar Badge de Cobertura con Jacoco
+      id: jacoco
+      uses: cicirello/jacoco-badge-generator@v2
+      with:
+        jacoco-csv-file: target/site/jacoco/jacoco.csv
+        badges-directory: .github/badges
+        generate-branches-badge: true
+
+    - name: Hacer commit de los badges generados
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Autogenerar badges de cobertura"
+        file_pattern: ".github/badges/*.svg"
